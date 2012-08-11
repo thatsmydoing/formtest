@@ -5,3 +5,5 @@ This project demonstrates an implementation of FormView, which allows you to typ
 In the example, we have a Person trait with fields common to both Student and Employee. Ideally, you could factor out the common fields into a nested sub-template.
 
 This is not currently possible with the current Play API since generics aren't allowed on templates, and Form is invariant (because you might fill it with the wrong thing). To overcome this limitation, we can create a wrapper class for Form, which disallows filling and binding. This can then be covariant since there's no danger of filling in incorrect data.
+
+Note however, that even though Scala can type check the classes, it won't check that the Mappings for your different Forms have the same key -> type mappings.
