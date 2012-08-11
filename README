@@ -1,4 +1,4 @@
-Background: http://stackoverflow.com/questions/663254/scala-covariance-contravariance-question
+Background: http://stackoverflow.com/q/11903593/862957
 
 This project demonstrates an implementation of FormView, which allows you to type-safely subtype Forms for use in templates.
 
