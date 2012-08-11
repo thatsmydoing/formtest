@@ -1,0 +1,19 @@
+@(_form: FormView[models.Student])
+
+@import helper._
+
+@if(_form.hasErrors) {
+	Errors!
+} else {
+	No errors!
+}
+
+@form(routes.Application.student) {
+	@personForm(_form)
+
+	@inputText(_form("school"))
+
+	@inputText(_form("grade"))
+
+	<input type="submit" />
+}

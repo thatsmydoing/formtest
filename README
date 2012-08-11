@@ -1,0 +1,7 @@
+Background: http://stackoverflow.com/questions/663254/scala-covariance-contravariance-question
+
+This project demonstrates an implementation of FormView, which allows you to type-safely subtype Forms for use in templates.
+
+In the example, we have a Person trait with fields common to both Student and Employee. Ideally, you could factor out the common fields into a nested sub-template.
+
+This is not currently possible with the current Play API since generics aren't allowed on templates, and Form is invariant (because you might fill it with the wrong thing). To overcome this limitation, we can create a wrapper class for Form, which disallows filling and binding. This can then be covariant since there's no danger of filling in incorrect data.

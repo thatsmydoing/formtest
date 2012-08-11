@@ -1,0 +1,19 @@
+@(_form: FormView[models.Employee])
+
+@import helper._
+
+@if(_form.hasErrors) {
+	Errors!
+} else {
+	No errors!
+}
+
+@form(routes.Application.employee) {
+	@personForm(_form)
+
+	@inputText(_form("company"))
+
+	@inputText(_form("position"))
+
+	<input type="submit" />
+}
