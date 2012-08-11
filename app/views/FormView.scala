@@ -8,8 +8,6 @@ object FormView {
 		type F = A
 		def realForm = form
 	}
-
-	implicit def formViewToFormView[A, T >: A](form: FormView[A]): FormView[T] = formToFormView(form.realForm)
 }
 
 trait FormView[+T] {
